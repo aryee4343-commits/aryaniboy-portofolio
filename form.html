@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+             background-color:hsl(0, 22%, 67%);
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 30px 20px;
+            color: #111;
+        }
+
+        .form-container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 35px;
+            color: #000;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 14px; 
+        }
+
+        td {
+            vertical-align: middle;
+            font-size: 17px;
+        }
+
+        td.label {
+            width: 32%;
+            white-space: nowrap;
+            padding-right: 15px;
+        }
+
+        td.input-cell {
+            width: 68%;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            padding: 4px 6px;
+            border: 1px solid #a6a6a6;
+            border-radius: 2px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: 1px solid #777;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .name-container,
+        .dob-container,
+        .mobile-container {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .name-input {
+            width: 48%;
+        }
+
+        .dob-input {
+            width: 65px;
+            text-align: center;
+        }
+
+        .dob-hint {
+            font-style: italic;
+            margin-left: 6px;
+            font-size: 15px;
+        }
+
+        .code-input {
+            width: 45px;
+            text-align: center;
+        }
+
+        .mobile-input {
+            flex-grow: 1;
+        }
+
+        .inline-options {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 16px;
+        }
+
+        .inline-options label {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        select {
+            width: 100%;
+            height: 28px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 90px;
+            resize: vertical;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        button {
+            background-color: #efefef;
+            border: 1px solid #767676;
+            border-radius: 2px;
+            padding: 3px 12px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+
+        button:hover {
+            background-color: #e5e5e5;
+        }
+
+        button:active {
+            background-color: #cccccc;
+        }
+
+        @media (max-width: 500px) {
+            td.label {
+                width: 40%;
+            }
+            td.input-cell {
+                width: 60%;
+            }
+            .dob-container {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Student Registration Form</h1>
+
+        <form action="#" method="POST" onsubmit="event.preventDefault();">
+            <table>
+                <!-- Roll no. -->
+                <tr>
+                    <td class="label">Roll no. :</td>
+                    <td class="input-cell">
+                        <input type="text" class="full-width">
+                    </td>
+                </tr>
+
+                <!-- Student name -->
+                <tr>
+                    <td class="label">Student name :</td>
+                    <td class="input-cell">
+                        <div class="name-container">
+                            <input type="text" class="name-input" placeholder="First Name">
+                            <span>-</span>
+                            <input type="text" class="name-input" placeholder="Last Name">
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Father's name -->
+                <tr>
+                    <td class="label">Father's name :</td>
+                    <td class="input-cell">
+                        <input type="text" class="full-width">
+                    </td>
+                </tr>
+
+                <!-- Date of birth -->
+                <tr>
+                    <td class="label">Date of birth :</td>
+                    <td class="input-cell">
+                        <div class="dob-container">
+                            <input type="text" class="dob-input" placeholder="Day">
+                            <span>-</span>
+                            <input type="text" class="dob-input" placeholder="Month">
+                            <span>-</span>
+                            <input type="text" class="dob-input" placeholder="Year">
+                            <span class="dob-hint">(DD-MM-YYYY)</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Mobile no. -->
+                <tr>
+                    <td class="label">Mobile no. :</td>
+                    <td class="input-cell">
+                        <div class="mobile-container">
+                            <input type="text" class="code-input" value="+91">
+                            <span>-</span>
+                            <input type="text" class="mobile-input">
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Email id -->
+                <tr>
+                    <td class="label">Email id :</td>
+                    <td class="input-cell">
+                        <input type="text" class="full-width">
+                    </td>
+                </tr>
+
+                <!-- Password -->
+                <tr>
+                    <td class="label">Password :</td>
+                    <td class="input-cell">
+                        <input type="password" class="full-width">
+                    </td>
+                </tr>
+
+                <!-- Gender -->
+                <tr>
+                    <td class="label">Gender :</td>
+                    <td class="input-cell">
+                        <div class="inline-options">
+                            <label><input type="radio" name="gender" value="male"> Male</label>
+                            <label><input type="radio" name="gender" value="female"> Female</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Department -->
+                <tr>
+                    <td class="label">Department :</td>
+                    <td class="input-cell">
+                        <div class="inline-options">
+                            <label><input type="checkbox" name="dept" value="cse"> CSE</label>
+                            <label><input type="checkbox" name="dept" value="it"> IT</label>
+                            <label><input type="checkbox" name="dept" value="ece"> ECE</label>
+                            <label><input type="checkbox" name="dept" value="civil"> Civil</label>
+                            <label><input type="checkbox" name="dept" value="mech"> Mech</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Course -->
+                <tr>
+                    <td class="label">Course :</td>
+                    <td class="input-cell">
+                        <select>
+                            <option value="">------------------------- Select Current Course's -------------------------</option>
+                            <option value="btech">B.Tech</option>
+                            <option value="mtech">M.Tech</option>
+                            <option value="mca">MCA</option>
+                            <option value="mba">MBA</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Student photo -->
+                <tr>
+                    <td class="label">Student photo :</td>
+                    <td class="input-cell">
+                        <input type="file" accept="image/*">
+                    </td>
+                </tr>
+
+                <!-- City -->
+                <tr>
+                    <td class="label">City :</td>
+                    <td class="input-cell">
+                        <input type="text" class="full-width">
+                    </td>
+                </tr>
+
+                <!-- Address -->
+                <tr>
+                    <td class="label">Address :</td>
+                    <td class="input-cell">
+                        <textarea></textarea>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Submit Button -->
+            <div class="button-container">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya Sri Luhung - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-xl text-primary tracking-tight">Arya Sri Luhung</a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="#tentang" class="hover:text-primary transition">Tentang Saya</a>
+                <a href="#portfolio" class="hover:text-primary transition">Portfolio</a>
+                <a href="#pendidikan" class="hover:text-primary transition">Pendidikan</a>
+                <a href="#pengalaman" class="hover:text-primary transition">Pengalaman</a>
+                <a href="#blog" class="hover:text-primary transition">Blog</a>
+                <a href="#kontak" class="hover:text-primary transition">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-4 py-20 md:py-28 flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+            <span class="inline-block bg-blue-100 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-4">Halo Semua 👋</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Saya Arya Sri Luhung</h1>
+            <p class="text-lg text-slate-600 mb-6 leading-relaxed">IT Programmer & Full Stack Web Developer yang berdomisili di <strong>Kabupaten Bandung Barat</strong>. Portofolio ini menampilkan proyek dan kontribusi saya sebagai pengembang di bidang teknologi.</p>
+            <a href="#kontak" class="inline-block bg-primary text-white font-medium px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 transition">Hubungi Saya</a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <img src="assets/img/neymar.jpg" alt="Foto Profil" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-xl border-4 border-white bg-slate-200">
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="tentang" class="bg-white py-20 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center">Tentang Saya</h2>
+            <div class="w-12 h-1 bg-primary mx-auto rounded mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">IT Programmer & Pelajar SMK</h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Saya adalah seorang IT Programmer yang berbasis di Kabupaten Bandung Barat dengan minat besar dalam pengembangan solusi perangkat lunak berbasis web. Fokus utama saya adalah merancang dan mengimplementasikan sistem yang efisien dan stabil menggunakan <em>full-stack development</em>.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <h3 class="font-bold text-xl text-slate-900 mb-3">Spesialisasi & Tech Stack Inti</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Sebagai pengembang web, spesialisasi saya mencakup pengembangan sistem menggunakan PHP dengan framework Laravel dan CodeIgniter. Keahlian utama meliputi:
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <li><strong>Backend:</strong> PHP (Laravel, CodeIgniter), RESTful API Development.</li>
+                        <li><strong>Database:</strong> MySQL/MariaDB (Perancangan, Query Optimization).</li>
+                        <li><strong>Frontend Dasar:</strong> HTML, CSS, JavaScript (Tailwind CSS, Bootstrap).</li>
+                        <li><strong>Metodologi:</strong> Clean Code & SDLC.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center">Portfolio Project</h2>
+        <p class="text-slate-600 text-center mb-4">Berikut beberapa project yang pernah dikembangkan</p>
+        <div class="w-12 h-1 bg-primary mx-auto rounded mb-12"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2">Portal Klaim</h3>
+                    <p class="text-slate-600 text-sm mb-4">Portal Klaim merupakan sebuah sistem untuk mempermudah nasabah atau unit kerja dalam melihat progress klaim asuransi.</p>
+                </div>
+                <a href="#" class="text-primary font-medium text-sm hover:underline inline-flex items-center">Lihat Disini &rarr;</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2">BSM Compro</h3>
+                    <p class="text-slate-600 text-sm mb-4">Website Company Profile resmi yang dikembangkan dengan desain modern dan responsif.</p>
+                </div>
+                <a href="#" class="text-primary font-medium text-sm hover:underline inline-flex items-center">Lihat Disini &rarr;</a>
+            </div>
+            <!-- Project 3 -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-2">Sistem POS Kasir & Workshop</h3>
+                    <p class="text-slate-600 text-sm mb-4">Sistem manajemen penjualan komprehensif mengintegrasikan transaksi, inventaris, hingga laporan keuangan akurat.</p>
+                </div>
+                <a href="#" class="text-primary font-medium text-sm hover:underline inline-flex items-center">Lihat Disini &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan & Bootcamp -->
+    <section id="pendidikan" class="bg-white py-20 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center">Pendidikan & Pelatihan</h2>
+            <p class="text-slate-600 text-center mb-4">Riwayat pendidikan formal dan pelatihan teknologi</p>
+            <div class="w-12 h-1 bg-primary mx-auto rounded mb-12"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Pendidikan 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-semibold text-primary bg-blue-50 px-2.5 py-1 rounded-md">Pendidikan Menengah Pertama</span>
+                    <h3 class="font-bold text-lg text-slate-900 mt-2">Madrasah Tsanawiyah (MTs)</h3>
+                    <p class="text-slate-600 text-sm mt-1">Pendidikan dasar menengah berbasis keagamaan dan umum</p>
+                </div>
+                <!-- Pendidikan 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-semibold text-primary bg-blue-50 px-2.5 py-1 rounded-md">Pendidikan Menengah Kejuruan</span>
+                    <h3 class="font-bold text-lg text-slate-900 mt-2">Sekolah Menengah Kejuruan (SMK)</h3>
+                    <p class="text-slate-600 text-sm mt-1">Fokus pada keahlian kejuruan dan teknologi informasi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Section -->
+    <section id="pengalaman" class="py-20 max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center">Pengalaman</h2>
+        <p class="text-slate-600 text-center mb-4">Pengalaman Kerja, Freelance, & Proyek Mandiri</p>
+        <div class="w-12 h-1 bg-primary mx-auto rounded mb-12"></div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+            <span class="text-xs font-semibold text-primary bg-blue-50 px-2.5 py-1 rounded-md">IT Programmer</span>
+            <h3 class="text-xl font-bold text-slate-900">Pengembangan Sistem & Aplikasi Web</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+                Bertanggung jawab penuh atas siklus pengembangan sistem informasi, perancangan basis data, integrasi API, serta pemeliharaan aplikasi berbasis web untuk mendukung efisiensi operasional.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="bg-white py-20 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center">Tulisan Blog</h2>
+            <p class="text-slate-600 text-center mb-4">Beberapa tulisan dan artikel seputar teknologi</p>
+            <div class="w-12 h-1 bg-primary mx-auto rounded mb-12"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-semibold text-slate-500">Manajemen Layanan TI</span>
+                    <h3 class="font-bold text-lg text-slate-900 mt-2 mb-2">Penerapan Kerangka Kerja ITIL pada Perusahaan</h3>
+                    <p class="text-slate-600 text-sm mb-4">Pembahasan mengenai implementasi Information Technology Infrastructure Library untuk peningkatan operasional teknologi informasi.</p>
+                    <a href="#" class="text-primary font-medium text-sm hover:underline">Baca Selengkapnya &rarr;</a>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <span class="text-xs font-semibold text-slate-500">Analisis Sistem</span>
+                    <h3 class="font-bold text-lg text-slate-900 mt-2 mb-2">Analisa Pelayanan Publik Berbasis Sistem Informasi</h3>
+                    <p class="text-slate-600 text-sm mb-4">Bagaimana metode pengolahan sistem informasi yang berpusat pada konsumen dapat meningkatkan kualitas layanan.</p>
+                    <a href="#" class="text-primary font-medium text-sm hover:underline">Baca Selengkapnya &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="bg-slate-900 text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-3">Hubungi Saya</h2>
+            <p class="text-slate-400 mb-8">Saya selalu terbuka untuk kolaborasi, diskusi proyek, atau peluang profesional baru.</p>
+            
+            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 max-w-md mx-auto mb-8 space-y-2">
+                <p class="text-slate-300 font-medium">Arya Sri Luhung</p>
+                <p class="text-slate-300">📧 Email: <a href="mailto:emailanda@domain.com" class="text-primary hover:underline">emailanda@domain.com</a></p>
+                <p class="text-slate-300">📍 Lokasi: Kabupaten Bandung Barat, Jawa Barat</p>
+            </div>
+            
+            <a href="mailto:emailanda@domain.com" class="inline-block bg-primary text-white font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition">Kirim Pesan Email</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-6 text-center text-sm border-t border-slate-800">
+        <p>Dibuat oleh Arya Sri Luhung, menggunakan Tailwind CSS.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LENSA STUDIO - Dark Mode</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Smooth scrolling agar perpindahan halaman halus */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* Warna hitam elegan */
+            color: #e0e0e0;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Navigasi Modern (Sticky) */
+        .nav-container {
+            position: sticky;
+            top: 0;
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(5px);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #2a2a2a;
+            z-index: 1000;
+        }
+
+        .nav-container h3 {
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #b0b0b0;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* Bagian Judul Utama */
+        .intro-section {
+            padding: 60px 20px 30px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro-section h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+
+        .intro-section p {
+            font-size: 16px;
+            color: #aaa;
+        }
+
+        /* Tata Letak Galeri (Grid) */
+        #galeri {
+            max-width: 1200px;
+            margin: 20px auto 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .galeri-item {
+            background: #1e1e1e;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            border: 1px solid #2a2a2a;
+        }
+
+        .galeri-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+        }
+
+        .galeri-item img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .galeri-item p {
+            font-size: 14px;
+            color: #ccc;
+            padding: 0 5px;
+        }
+
+        .galeri-item p strong {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: #888;
+            margin-bottom: 4px;
+        }
+
+        /* Styling untuk Masing-masing Section (Tentang, Layanan, Kontak) */
+        .page-section {
+            padding: 80px 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            border-top: 1px solid #2a2a2a;
+            text-align: center;
+        }
+
+        .page-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .page-section p {
+            font-size: 16px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigasi -->
+    <header class="nav-container">
+        <h3>LENSA STUDIO</h3>
+        <nav>
+            <ul>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Judul Utama -->
+    <section class="intro-section">
+        <h1>Koleksi Karya Terbaru</h1>
+        <p>Kumpulan hasil jepretan pilihan dari berbagai sesi pemotretan profesional kami.</p> 
+    </section>
+
+    <!-- Konten Utama -->
+    <main>
+        <!-- Bagian Galeri -->
+        <section id="galeri">
+            <div class="galeri-item">
+                <img src="assets/img/cahaya arya.jpg" alt="Cahaya Senja">
+                <p><strong>POTRET</strong>Cahaya senja</p>
+            </div>
+            
+            <div class="galeri-item">
+                <img src="assets/img/jalanan di malem kota.jpg" alt="Jalanan Malam">
+                <p><strong>KOTA</strong>Jalanan malam</p>
+            </div>
+            
+            <div class="galeri-item">
+                <img src="assets/img/.jpg" alt="Tepi Danau">
+                <p><strong>ALAM</strong>Tepi danau</p>
+            </div>
+        </section>
+
+        <!-- Bagian Tentang Kami (Terpisah dan bisa dituju via menu) -->
+        <section id="tentang" class="page-section">
+            <h2>Tentang Kami</h2>
+            <p>LENSA STUDIO adalah wadah kreativitas fotografi yang mendedikasikan diri untuk menangkap momen berharga secara artistik dan penuh makna.</p>
+        </section>
+
+        <!-- Bagian Layanan (Terpisah dan bisa dituju via menu) -->
+        <section id="layanan" class="page-section">
+            <h2>Layanan</h2>
+            <p>Kami menyediakan berbagai layanan pemotretan mulai dari potret personal, lanskap, komersial, hingga dokumentasi acara spesial Anda.</p>
+        </section>
+
+        <!-- Bagian Kontak (Terpisah dan bisa dituju via menu) -->
+        <section id="kontak" class="page-section">
+            <h2>Kontak</h2>
+            <p>Tertarik bekerja sama atau ingin memesan sesi foto? Hubungi kami melalui email atau media sosial resmi LENSA STUDIO.</p>
+        </section>
+    </main>
+
+</body>
+</html>
